@@ -5,37 +5,41 @@
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <title>Maskapai Penerbangan</title>
   <script src="https://code.jquery.com/jquery-3.6.4.min.js"></script>
-  <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/js/bootstrap.min.js"></script>
   <script src="https://code.jquery.com/ui/1.12.1/jquery-ui.js"></script>
-  <link href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css" rel="stylesheet">
-  <link rel="stylesheet" href="home.css">
+  <link rel="stylesheet" href="index.css">
   <link href="style.css" rel="stylesheet">
-  <style>
-    body {
-      background-image: url('https://via.placeholder.com/1500x800');
-      background-size: cover;
-      background-repeat: no-repeat;
-    }
-    .container {
-      background-color: rgba(255, 255, 255, 0.8); /*transparansi*/
-      padding: 20px;
-      border-radius: 10px;
-      margin-top: 50px;
-    }
-    h1 {
-      color: #333;
-      text-align: center;
-    }
-    #flightSearchForm {
-      background-color: #fff;
-      padding: 20px;
-      border-radius: 10px;
-    }
-  </style>
+  <!-- Favicons -->
+  <link href="assets/img/favicon.png" rel="icon">
+  <link href="assets/img/apple-touch-icon.png" rel="apple-touch-icon">
+
+  <!-- Google Fonts -->
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Open+Sans:ital,wght@0,300;0,400;0,500;0,600;0,700;1,300;1,400;1,600;1,700&family=Montserrat:ital,wght@0,300;0,400;0,500;0,600;0,700;1,300;1,400;1,500;1,600;1,700&family=Raleway:ital,wght@0,300;0,400;0,500;0,600;0,700;1,300;1,400;1,500;1,600;1,700&display=swap" rel="stylesheet">
+
+  <!-- Template Main CSS File -->
+  <link href="style.css" rel="stylesheet">
+
+  <!-- Bootstrap CSS -->
+  <link href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css" rel="stylesheet">
+  <!-- Custom CSS -->
+  <link href="flights.css" rel="stylesheet">
+  <!-- Inside the <head> tag -->
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.4/css/all.min.css">
 </head>
 <body>
 
-  <!-- ini header navbar y ges -->
+  <!-- ======= Header ======= -->
+  <section id="topbar" class="topbar d-flex align-items-center">
+    <div class="container d-flex justify-content-center justify-content-md-between">
+      <div class="social-links d-none d-md-flex align-items-center">
+        <a href="#" class="twitter"><i class="bi bi-twitter"></i></a>
+        <a href="#" class="facebook"><i class="bi bi-facebook"></i></a>
+        <a href="#" class="instagram"><i class="bi bi-instagram"></i></a>
+        <a href="#" class="linkedin"><i class="bi bi-linkedin"></i></i></a>
+      </div>
+    </div>
+  </section><!-- End Top Bar -->
   <header id="header" class="header d-flex align-items-center">
 
     <div class="container-fluid container-xl d-flex align-items-center justify-content-between">
@@ -95,7 +99,7 @@
     </ul>
     <div class="tab-content mt-3">
         <div class="tab-pane fade show active" id="flights">
-            <h2>Tiket Pesawat</h2>
+            <h2></h2>
             <div class="mt-5">
               <h2>Advanced Flight Search</h2>
               <form id="advancedSearchForm">
@@ -137,7 +141,7 @@
     </div>
   </div>
 
-  <div class="mt-5">
+  <div class="container mt-5">
     <h2>Available Flights</h2>
     <div class="row">
       <div class="col-md-6">
@@ -333,7 +337,13 @@
     </div>
 
   </footer>
+  <!-- Bootstrap JS and jQuery -->
+  <script src="https://code.jquery.com/jquery-3.5.1.slim.min.js"></script>
+  <script src="https://cdn.jsdelivr.net/npm/@popperjs/core@2.10.2/dist/umd/popper.min.js"></script>
+  <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/js/bootstrap.min.js"></script>
 
+  <!-- Template Main JS File -->
+  <script src="scripts.js"></script>
   <script src="home.js"></script>
   <script src="js/autocomplete.js"></script>
 </body>
