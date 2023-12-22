@@ -6,8 +6,10 @@
   <title>Maskapai Penerbangan</title>
   <script src="https://code.jquery.com/jquery-3.6.4.min.js"></script>
   <script src="https://code.jquery.com/ui/1.12.1/jquery-ui.js"></script>
-  <link rel="stylesheet" href="index.css">
+  <link href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css" rel="stylesheet">
+  <link rel="stylesheet" href="home.css">
   <link href="style.css" rel="stylesheet">
+
   <!-- Favicons -->
   <link href="assets/img/favicon.png" rel="icon">
   <link href="assets/img/apple-touch-icon.png" rel="apple-touch-icon">
@@ -26,6 +28,41 @@
   <link href="flights.css" rel="stylesheet">
   <!-- Inside the <head> tag -->
   <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.4/css/all.min.css">
+
+  <style>
+    body::before {
+    content: "";
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background: rgba(3, 30, 45, 0.6); /* Warna hitam dengan tingkat kecerahan 0.6 (sesuaikan sesuai keinginan) */
+    z-index: -1; /* Letakkan di bawah gambar utama */
+    }
+    body {
+    background-image: url('assets/pesawat.png');
+    background-size: cover; /* or use 'contain' if you want the whole image to be visible */
+    background-repeat: no-repeat;
+    background-attachment: fixed; /* Fixed background */
+    background-position: center center; /* Center the background image */
+    }
+    .p {
+      background-color: rgba(255, 255, 255, 0.8); /*transparansi*/
+      padding: 20px;
+      border-radius: 10px;
+      margin-top: 50px;
+    }
+    h1 {
+      color: #333;
+      text-align: center;
+    }
+    #flightSearchForm {
+      background-color: #fff;
+      padding: 20px;
+      border-radius: 10px;
+    }
+  </style>
 </head>
 <body>
 
@@ -40,6 +77,7 @@
       </div>
     </div>
   </section><!-- End Top Bar -->
+
   <header id="header" class="header d-flex align-items-center">
 
     <div class="container-fluid container-xl d-flex align-items-center justify-content-between">
@@ -50,7 +88,7 @@
       </a>
       <nav id="navbar" class="navbar">
         <ul>
-          <li><a href="#hero">Home</a></li>
+          <li><a href="#">Home</a></li>
           <li><a href="#">About</a></li>
           <li class="dropdown"><a href="#"><span>Flights</span> <i class="bi bi-chevron-down dropdown-indicator"></i></a>
             <ul>
@@ -78,9 +116,10 @@
       <i class="mobile-nav-toggle mobile-nav-hide d-none bi bi-x"></i>
 
     </div>
-  </header>
+  </header><!-- End Header -->
+  <!-- End Header -->
 
-  <div class="container mt-5">
+  <div class="container mt-5 p">
     <h1>Welcome to Our Airline</h1> <br>
     <!-- ini kaya tabbed pane di jframe -->
     <ul class="nav nav-tabs nav-fill" id="myTabs">
@@ -141,7 +180,7 @@
     </div>
   </div>
 
-  <div class="container mt-5">
+  <div class="container mt-5 p">
     <h2>Available Flights</h2>
     <div class="row">
       <div class="col-md-6">
@@ -177,7 +216,7 @@
     </div>
   </div>
 
-  <div class="container mt-4">
+  <div class="container mt-4 p">
     <h2 class="text-center mb-4">Special Offers</h2>
     <div id="carouselExampleControls" class="carousel slide" data-ride="carousel">
       <div class="carousel-inner">
@@ -214,7 +253,7 @@
     </div>
   </div>
   
-  <div class="container mt-5">
+  <div class="container mt-5 p">
     <h2 class="text-center mb-4">News Highlights</h2>
     <div class="row">
       <div class="col-md-6 mb-4">
@@ -241,7 +280,7 @@
     </div>
   </div>
   
-  <div class="mt-5">
+  <div class="container mt-5 p">
     <h2>Customer Testimonials</h2>
     <div id="testimonialsCarousel" class="carousel slide" data-ride="carousel">
       <ol class="carousel-indicators">
@@ -261,7 +300,7 @@
             <p>"Comfortable seats and friendly staff. Highly recommend!"</p>
           </div>
         </div>
-      </div>
+      </div>      
       <a class="carousel-control-prev" href="#testimonialsCarousel" role="button" data-slide="prev">
         <span class="carousel-control-prev-icon" aria-hidden="true"></span>
         <span class="sr-only">Previous</span>
@@ -337,13 +376,14 @@
     </div>
 
   </footer>
+
   <!-- Bootstrap JS and jQuery -->
   <script src="https://code.jquery.com/jquery-3.5.1.slim.min.js"></script>
   <script src="https://cdn.jsdelivr.net/npm/@popperjs/core@2.10.2/dist/umd/popper.min.js"></script>
   <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/js/bootstrap.min.js"></script>
 
   <!-- Template Main JS File -->
-  <script src="scripts.js"></script>
+  <script src="js/scripts.js"></script>
   <script src="home.js"></script>
   <script src="js/autocomplete.js"></script>
 </body>

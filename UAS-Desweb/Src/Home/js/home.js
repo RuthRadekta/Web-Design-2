@@ -4,3 +4,9 @@ $(document).ready(function() {
         $(this).tab('show');
     });
 });
+
+
+$(document).ready(function(){
+    $('#testimonialsCarousel').carousel();
+});
+
