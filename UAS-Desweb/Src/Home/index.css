@@ -1,5 +1,5 @@
 #header {
-  background: rgba(70, 130, 169, 0.5);
+  background: rgba(70, 130, 169, 0.3);
   transition: background 0.3s ease; /* Add transition for a smoother effect */
   position: sticky;
   top: 0;
@@ -11,7 +11,7 @@
 }
 
 #topbar {
-  background: rgba(70, 130, 169, 0.5); /* The fourth value (0.5) represents the alpha (transparency) level */
+  background: rgba(70, 130, 169, 0.3); /* The fourth value (0.5) represents the alpha (transparency) level */
 }
 
 body::before {
@@ -50,10 +50,6 @@ h1 {
     padding: 20px;
     border-radius: 10px;
   }
-
-#tab {
-  background-color: rgba(255, 255, 255, 0.4);
-}
 
 .ui-menu {
     list-style-type: none;
