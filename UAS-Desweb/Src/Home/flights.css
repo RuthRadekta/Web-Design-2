@@ -709,7 +709,7 @@
   /*--------------------------------------------------------------
   # destinations Section
   --------------------------------------------------------------*/
-  .destinations .destinations-flters {
+  /*.destinations .destinations-flters {
     padding: 0 0 20px 0;
     margin: 0 auto;
     list-style: none;
@@ -792,13 +792,86 @@
   
   .destinations .destinations-wrap:hover img {
     transform: scale(1.1);
-  }
+  }*/
   
   @media (min-width: 992px) {
     .pricing .featured {
       transform: scale(1.15);
     }
   }
+
+/* Style untuk card body */
+.card {
+    border-radius: 20px;
+    box-shadow: 0px 8px 20px rgba(0, 0, 0, 0.1);
+    margin-top: 50px;
+  }
+  
+  .card-body {
+    padding: 40px;
+  }
+  
+  .card-title {
+    margin-bottom: 20px;
+    font-size: 2.5rem;
+    font-weight: bold;
+  }
+  
+  /* Style untuk tombol filter */
+  .filter-btn {
+    border-radius: 20px;
+    margin-right: 10px;
+  }
+  
+  /* Style untuk kartu destinasi */
+  .card {
+    border: 1px solid #ccc;
+    border-radius: 8px;
+    transition: transform 0.3s ease;
+    margin: 10px;
+    padding: 10px;
+  }
+
+  .card-text{
+    color: #4682A9;
+  }
+  
+  .card:hover {
+    transform: translateY(-5px);
+    box-shadow: 0px 5px 15px rgba(0, 0, 0, 0.1);
+  }
+  
+  .card-title {
+    font-size: 18px;
+    font-weight: bold;
+  }
+
+  /* Style untuk tombol filter */
+.filter-btn {
+    border-radius: 20px;
+    margin-right: 10px;
+  }
+  
+/* Style untuk tombol filter */
+.filter-btn {
+    border-radius: 20px;
+    margin-right: 10px;
+  }
+  
+  /* Mengubah warna tombol sesuai dengan kebutuhan */
+  .filter-btn {
+    background-color: #91C8E4;
+    border-color: #91C8E4;
+    color: #fff;
+  }
+  
+  /* Memastikan efek hover dari .btn-primary tetap terjaga */
+  .filter-btn:hover {
+    background-color: #F6F4EB;
+    border-color: #007bff;
+    color: #fff;
+  }
+
   
   /*--------------------------------------------------------------
   # Frequently Asked Questions Section

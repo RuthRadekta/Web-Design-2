@@ -235,44 +235,70 @@ document.addEventListener('DOMContentLoaded', () => {
   /**
    * Porfolio isotope and filter
    */
-
-  document.addEventListener("DOMContentLoaded", function() {
-    const filters = document.querySelectorAll(".destinations-flters li");
-    const items = document.querySelectorAll(".destinations-item");
-
-    filters.forEach(function(filter) {
-      filter.addEventListener("click", function() {
-        const selectedFilter = this.getAttribute("data-filter");
-
-        items.forEach(function(item) {
-          const isItemFiltered = !selectedFilter || item.classList.contains(selectedFilter);
-          item.style.display = isItemFiltered ? "block" : "none";
-        });
-
-        filters.forEach(function(filter) {
-          filter.classList.remove("filter-active");
-        });
-
-        this.classList.add("filter-active");
+  
+// Data destinasi dengan informasi tambahan (gambar, harga, informasi)
+const destinations = [
+    { 
+      name: 'Tokyo, Jepang',
+      category: 'asia',
+      image: 'https://via.placeholder.com/300',
+      price: '$1000',
+      info: 'Nikmati keindahan dan kebudayaan Jepang.'
+    },
+    // Tambahkan destinasi lainnya dengan format yang sama
+  ];
+  
+  // Fungsi untuk menampilkan destinasi sesuai filter
+  function displayDestinations(category) {
+    const destinationsContainer = document.getElementById('destinations');
+    destinationsContainer.innerHTML = '';
+  
+    let filteredDestinations = destinations;
+    if (category !== 'all') {
+      filteredDestinations = destinations.filter(destination => destination.category === category);
+    }
+  
+    filteredDestinations.forEach(destination => {
+      createDestinationCard(destination);
+    });
+  }
+  
+  // Fungsi untuk membuat tampilan kartu destinasi
+  function createDestinationCard(destination) {
+    const destinationCard = document.createElement('div');
+    destinationCard.classList.add('col-md-4', 'mb-4');
+  
+    const card = `
+      <div class="card">
+        <img src="${destination.image}" class="destination-image" alt="${destination.name}">
+        <div class="card-body">
+          <h5 class="card-title">${destination.name}</h5>
+          <p class="card-text">${destination.info}</p>
+          <p class="card-text"><strong>Harga:</strong> ${destination.price}</p>
+        </div>
+      </div>
+    `;
+  
+    destinationCard.innerHTML = card;
+    document.getElementById('destinations').appendChild(destinationCard);
+  }
+  
+  // Event listener untuk tombol filter
+  document.addEventListener('DOMContentLoaded', () => {
+    const filterButtons = document.querySelectorAll('.filter-btn');
+  
+    filterButtons.forEach(btn => {
+      btn.addEventListener('click', () => {
+        const category = btn.getAttribute('data-filter');
+        displayDestinations(category);
       });
     });
+    
+    // Tampilkan semua destinasi saat halaman dimuat
+    displayDestinations('all');
   });
-
-  $(document).ready(function () {
-    $(".button").click(function () {
-        let nilai = $(this).attr("data-filter");
-        if (nilai == "semua") {
-            $(".filter").show("1000")
-        } else {
-            $(".filter").not("." + nilai).hide("1000")
-            $(".filter").filter("." + nilai).show("1000")
-        }
-    });
-    $("ul .button").click(function () {
-        $(this).addClass('active').siblings().removeClass('active')
-    });
-});
-
+  
+  
   /**
    * Animation on scroll function and init
    */
