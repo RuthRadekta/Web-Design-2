@@ -59,6 +59,7 @@
   </nav>
 
   <div class="container mt-5">
+    <h1>Welcome to Our Airline</h1> <br>
     <!-- ini kaya tabbed pane di jframe -->
     <ul class="nav nav-tabs nav-fill" id="myTabs">
         <li class="nav-item">
@@ -77,6 +78,34 @@
     <div class="tab-content mt-3">
         <div class="tab-pane fade show active" id="flights">
             <h2>Tiket Pesawat</h2>
+            <div class="mt-5">
+              <h2>Advanced Flight Search</h2>
+              <form id="advancedSearchForm">
+                <div class="form-row">
+                  <div class="form-group col-md-4">
+                    <label for="inputFrom">From</label>
+                    <input type="text" class="form-control" id="inputFrom" placeholder="Departure">
+                  </div>
+                  <div class="form-group col-md-4">
+                    <label for="inputTo">To</label>
+                    <input type="text" class="form-control" id="inputTo" placeholder="Destination">
+                  </div>
+                  <div class="form-group col-md-2">
+                    <label for="inputDate">Departure Date</label>
+                    <input type="date" class="form-control" id="inputDate">
+                  </div>
+                  <div class="form-group col-md-2">
+                    <label for="inputClass">Class</label>
+                    <select id="inputClass" class="form-control">
+                      <option selected>Choose...</option>
+                      <option>Economy</option>
+                      <option>Business</option>
+                    </select>
+                  </div>
+                </div>
+                <button type="submit" class="btn btn-primary">Search</button>
+              </form>
+          </div>
         </div>
         <div class="tab-pane fade" id="offers">
             <h2>Check-In</h2>
@@ -91,7 +120,7 @@
   </div>
 
   <div class="container">
-    <h1>Welcome to Our Airline</h1>
+    <!-- 
     <p>Book your flights with ease and comfort.</p>
 
     <div class="mt-5">
@@ -121,9 +150,10 @@
           </div>
           <button type="submit" class="btn btn-primary">Search</button>
         </form>
-      </div>
+    </div>
+   -->
 
-<div class="mt-5">
+  <div class="mt-5">
     <h2>Available Flights</h2>
     <div class="row">
       <div class="col-md-6">
@@ -159,8 +189,7 @@
     </div>
   </div>
 
-<!-- Offer Section -->
-<div class="container mt-4">
+  <div class="container mt-4">
     <h2 class="text-center mb-4">Special Offers</h2>
     <div id="carouselExampleControls" class="carousel slide" data-ride="carousel">
       <div class="carousel-inner">
@@ -197,7 +226,7 @@
     </div>
   </div>
   
-<div class="container mt-5">
+  <div class="container mt-5">
     <h2 class="text-center mb-4">News Highlights</h2>
     <div class="row">
       <div class="col-md-6 mb-4">
