@@ -235,39 +235,43 @@ document.addEventListener('DOMContentLoaded', () => {
   /**
    * Porfolio isotope and filter
    */
-  let destinationsnIsotope = document.querySelector('.destinations-isotope');
 
-  if (destinationsnIsotope) {
+  document.addEventListener("DOMContentLoaded", function() {
+    const filters = document.querySelectorAll(".destinations-flters li");
+    const items = document.querySelectorAll(".destinations-item");
 
-    let destinationsFilter = destinationsnIsotope.getAttribute('data-destinations-filter') ? destinationsnIsotope.getAttribute('data-destinations-filter') : '*';
-    let destinationsLayout = destinationsnIsotope.getAttribute('data-destinations-layout') ? destinationsnIsotope.getAttribute('data-destinations-layout') : 'masonry';
-    let destinationsSort = destinationsnIsotope.getAttribute('data-destinations-sort') ? destinationsnIsotope.getAttribute('data-destinations-sort') : 'original-order';
+    filters.forEach(function(filter) {
+      filter.addEventListener("click", function() {
+        const selectedFilter = this.getAttribute("data-filter");
 
-    window.addEventListener('load', () => {
-      let destinationsIsotope = new Isotope(document.querySelector('.destinations-container'), {
-        itemSelector: '.destinations-item',
-        layoutMode: destinationsLayout,
-        filter: destinationsFilter,
-        sortBy: destinationsSort
+        items.forEach(function(item) {
+          const isItemFiltered = !selectedFilter || item.classList.contains(selectedFilter);
+          item.style.display = isItemFiltered ? "block" : "none";
+        });
+
+        filters.forEach(function(filter) {
+          filter.classList.remove("filter-active");
+        });
+
+        this.classList.add("filter-active");
       });
-
-      let menuFilters = document.querySelectorAll('.destinations-isotope .destinations-flters li');
-      menuFilters.forEach(function(el) {
-        el.addEventListener('click', function() {
-          document.querySelector('.destinations-isotope .destinations-flters .filter-active').classList.remove('filter-active');
-          this.classList.add('filter-active');
-          destinationsIsotope.arrange({
-            filter: this.getAttribute('data-filter')
-          });
-          if (typeof aos_init === 'function') {
-            aos_init();
-          }
-        }, false);
-      });
-
     });
+  });
 
-  }
+  $(document).ready(function () {
+    $(".button").click(function () {
+        let nilai = $(this).attr("data-filter");
+        if (nilai == "semua") {
+            $(".filter").show("1000")
+        } else {
+            $(".filter").not("." + nilai).hide("1000")
+            $(".filter").filter("." + nilai).show("1000")
+        }
+    });
+    $("ul .button").click(function () {
+        $(this).addClass('active').siblings().removeClass('active')
+    });
+});
 
   /**
    * Animation on scroll function and init
