@@ -1224,7 +1224,64 @@
   }
   
   
-  /* Styles for Check In card */
+  /*--Login Section--*/
+
+  .customer-service {
+    position: fixed;
+    bottom: 20px;
+    right: 20px;
+    font-size: 24px;
+    background-color: #F6F4EB;
+    color: #4682A9 ;
+    border-radius: 50%;
+    padding: 15px;
+    text-align: center;
+    box-shadow: 0px 0px 10px rgba(0, 0, 0, 0.1);
+    z-index: 999; /* Ensure the icon stays above other elements */
+    }
+  
+  /* CSS untuk tab pane */
+.nav-tabs .nav-item .nav-link {
+  border: none;
+  border-top-left-radius: 0.25rem;
+  border-top-right-radius: 0.25rem;
+  color: #4682A9;
+  background-color: #f8f9fa;
+  border-color: transparent;
+}
+
+.nav-tabs .nav-item .nav-link.active {
+  color: #4682A9;
+  font-weight: bold;
+  background-color: #F6F4EB;
+  border-color: #007bff;
+}
+
+.card {
+  border: none;
+  border-radius: 0.5rem;
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+}
+
+.card-title {
+  font-size: 1.25rem;
+  margin-bottom: 0.5rem;
+}
+
+.card-text {
+  color: #555;
+}
+
+.btn-primary {
+  background-color: #4682A9 !important;
+  border: none;
+}
+
+.btn-primary:hover {
+  background-color: #91C8E4 !important;
+}
+
+/* Styles for Check In card */
 .check-in-card {
   border: 1px solid #ccc;
   border-radius: 8px;
