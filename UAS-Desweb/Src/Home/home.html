@@ -9,6 +9,8 @@
   <script src="https://code.jquery.com/ui/1.12.1/jquery-ui.js"></script>
   <link href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css" rel="stylesheet">
   <link rel="stylesheet" href="home.css">
+  <link href="style.css" rel="stylesheet">
+  <link href="flights.css" rel="stylesheet">
   <style>
     body {
       background-image: url('https://via.placeholder.com/1500x800');
@@ -34,29 +36,46 @@
 </head>
 <body>
 
-  <!-- ini navbar y ges -->
-  <nav class="navbar navbar-expand-lg navbar-light bg-light">
-    <a class="navbar-brand" href="#">Maskapai.</a>
-    <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarNav" aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
-      <span class="navbar-toggler-icon"></span>
-    </button>
-    <div class="collapse navbar-collapse" id="navbarNav">
-      <ul class="navbar-nav ml-auto">
-        <li class="nav-item">
-          <a class="nav-link" href="nyoba.html">Home</a>
-        </li>
-        <li class="nav-item">
-          <a class="nav-link" href="flights.html">Flights</a>
-        </li>
-        <li class="nav-item">
-          <a class="nav-link" href="profil.html">About</a>
-        </li>
-        <li class="nav-item">
-          <a class="nav-link" href="#">Contact</a>
-        </li>
-      </ul>
+  <!-- ini header navbar y ges -->
+  <header id="header" class="header d-flex align-items-center">
+
+    <div class="container-fluid container-xl d-flex align-items-center justify-content-between">
+      <a href="index.html" class="logo d-flex align-items-center">
+        <!-- Uncomment the line below if you also wish to use an image logo -->
+        <!-- <img src="assets/img/logo.png" alt=""> -->
+        <h1>Maskapai<span>.</span></h1>
+      </a>
+      <nav id="navbar" class="navbar">
+        <ul>
+          <li><a href="#hero">Home</a></li>
+          <li><a href="#">About</a></li>
+          <li class="dropdown"><a href="#"><span>Flights</span> <i class="bi bi-chevron-down dropdown-indicator"></i></a>
+            <ul>
+              <li><a href="#">Available Flights</a></li>
+              <li class="dropdown"><a href="#destinations"><span>Destinations</span> <i class="bi bi-chevron-down dropdown-indicator"></i></a>
+                <ul>
+                  <li><a href="#">Top Destinations</a></li>
+                  <li><a href="#">Asia</a></li>
+                  <li><a href="#">Europe</a></li>
+                  <li><a href="#">America</a></li>
+                  <li><a href="#">Australia</a></li>
+                  <li><a href="#">Africa</a></li>
+                </ul>
+              </li>
+              <li><a href="#">Check In</a></li>
+              <li><a href="#">Flight Informations</a></li>
+              <li><a href="#">FAQ</a></li>
+            </ul>
+          </li>
+          <li><a href="#">Login</a></li>
+        </ul>
+      </nav><!-- .navbar -->
+
+      <i class="mobile-nav-toggle mobile-nav-show bi bi-list"></i>
+      <i class="mobile-nav-toggle mobile-nav-hide d-none bi bi-x"></i>
+
     </div>
-  </nav>
+  </header>
 
   <div class="container mt-5">
     <h1>Welcome to Our Airline</h1> <br>
@@ -285,11 +304,69 @@
     </div>
   </div>
 
-  <footer class="mt-5">
+  <footer id="footer" class="footer">
+
     <div class="container">
-      <hr>
-      <p class="text-center">&copy; 2023 Maskapai. All rights reserved.</p>
+      <div class="row gy-4">
+        <div class="col-lg-5 col-md-12 footer-info">
+          <a href="index.html" class="logo d-flex align-items-center">
+            <span>Impact</span>
+          </a>
+          <p>Cras fermentum odio eu feugiat lide par naso tierra. Justo eget nada terra videa magna derita valies darta donna mare fermentum iaculis eu non diam phasellus.</p>
+          <div class="social-links d-flex mt-4">
+            <a href="#" class="twitter"><i class="bi bi-twitter"></i></a>
+            <a href="#" class="facebook"><i class="bi bi-facebook"></i></a>
+            <a href="#" class="instagram"><i class="bi bi-instagram"></i></a>
+            <a href="#" class="linkedin"><i class="bi bi-linkedin"></i></a>
+          </div>
+        </div>
+
+        <div class="col-lg-2 col-6 footer-links">
+          <h4>Useful Links</h4>
+          <ul>
+            <li><a href="#">Home</a></li>
+            <li><a href="#">About us</a></li>
+            <li><a href="#">Services</a></li>
+            <li><a href="#">Terms of service</a></li>
+            <li><a href="#">Privacy policy</a></li>
+          </ul>
+        </div>
+
+        <div class="col-lg-2 col-6 footer-links">
+          <h4>Our Services</h4>
+          <ul>
+            <li><a href="#">Flights</a></li>
+            <li><a href="#">Cabin Informations</a></li>
+            <li><a href="#">Destinations</a></li>
+            <li><a href="#">Vouchers</a></li>
+            <li><a href="#">My Trips</a></li>
+          </ul>
+        </div>
+
+        <div class="col-lg-3 col-md-12 footer-contact text-center text-md-start">
+          <h4>Contact Us</h4>
+          <p>
+            A108 Adam Street <br>
+            New York, NY 535022<br>
+            United States <br><br>
+            <strong>Phone:</strong> +1 5589 55488 55<br>
+            <strong>Email:</strong> info@example.com<br>
+          </p>
+
+        </div>
+
+      </div>
     </div>
+
+    <div class="container mt-4">
+      <div class="copyright">
+        &copy; Copyright <strong><span>Kelompok XX</span></strong>. All Rights Reserved
+      </div>
+      <div class="credits">
+        Designed by Kelompok XX</a>
+      </div>
+    </div>
+
   </footer>
 
   <script src="home.js"></script>
