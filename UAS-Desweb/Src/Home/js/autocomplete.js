@@ -38,6 +38,5 @@ $(function() {
   
     $("#inputFrom, #inputTo").autocomplete({
       source: availableCities
-    });
   });
-  
+});
