@@ -37,3 +37,20 @@ function cariPerjalanan() {
     // Tampilkan hasil di dalam div dengan ID "hasilPerjalanan"
     document.getElementById("hasilPerjalanan").innerHTML = hasilPencarian;
 }
+
+function toggleButton() {
+    var checkbox = document.getElementById('agreeCheckbox');
+    var button = document.getElementById('lanjutButton');
+
+    // Jika checkbox dicentang, aktifkan tombol Lanjutkan
+    if (checkbox.checked) {
+      button.disabled = false;
+      button.classList.remove('btn-secondary');
+      button.classList.add('btn-primary');
+    } else {
+      // Jika checkbox tidak dicentang, nonaktifkan tombol Lanjutkan
+      button.disabled = true;
+      button.classList.remove('btn-primary');
+      button.classList.add('btn-secondary');
+    }
+  }

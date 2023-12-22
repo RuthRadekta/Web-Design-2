@@ -134,17 +134,72 @@
                     </select>
                   </div>
                 </div>
-                <div class="mt-5 d-flex justify-content-end">
+                <div class="mt-5 d-flex justify-content-center">
                   <button type="submit" class="btn btn-primary">Search</button>
                 </div>
               </form>
-          </div>
+            </div>
         </div>
         <div class="tab-pane fade" id="check-in">
-            <h2>Check-In</h2>
+            <h2></h2>
+            <div class="container mt-3">
+              <div class="info-di-panel">
+                <ul>
+                  <li> Satu kode booking hanya diizinkan untuk melakukan satu kali Online Check-In.
+                      <ul>
+                          <li> Apabila terdapat lebih dari satu penumpang dalam satu kode booking, maka seluruh penumpang wajib melakukan Online Check-In dalam satu waktu.</li>
+                          <li> Jika tidak, penumpang lain dalam kode booking yang sama tidak bisa melakukan Online Check-In dan hanya dapat melakukan Check-In di bandara.</li>
+                      </ul>
+                  </li>
+                  <li> Layanan Online Check-In tersedia mulai dari 48 jam hingga 2 jam sebelum waktu keberangkatan untuk penerbangan domestik dan 48 jam hingga 4 jam sebelum waktu keberangkatan untuk penerbangan internasional</li>
+                  <li> Layanan Online Check-In tidak tersedia untuk penumpang berikut:
+                      <ul>
+                          <li> Penumpang yang tidak memiliki e-ticket</li>
+                          <li> Bayi berumur di bawah 2 tahun yang tidak menempati tempat duduk</li>
+                          <li> Penumpang yang membutuhkan bantuan khusus di bandara, misalnya; penumpang dalam kondisi hamil, anak-anak berusia kurang dari 12 tahun yang bepergian sendiri, Unaccompanied Minor (UM), membutuhkan kursi roda, stretcher case atau penanganan khusus lainnya di bandara.</li>
+                          <li> Penumpang dengan kode booking yang berisi lebih dari 9 orang (group booking)</li>
+                      </ul>
+                  </li>
+                  <li> Sistem akan memberikan Anda tempat duduk secara otomatis, tapi Anda dapat mengubah kursi sesuai dengan preferensi Anda saat Online Check-In.</li>
+                  <li> Untuk penerbangan internasional, harap melaporkan Online Boarding Pass Anda (dalam bentuk PDF maupun QR barcode) di konter Check-In di bandara sebelum naik pesawat.</li>
+                  <li> Untuk penerbangan internasional, pastikan Anda membawa Paspor dengan validitas minimal enam bulan sebelum tanggal perjalanan, dan dokumen valid lain seperti Visa yang dibutuhkan untuk perjalanan Anda. Tunjukkan dokumen-dokumen tersebut di konter Check-In Garuda Indonesia di bandara sebelum naik pesawat.</li>
+                  <li> Nomor ruang tunggu dan nomor kursi dapat berubah sewaktu-waktu tanpa pemberitahuan terlebih dahulu, karena beberapa alasan seperti situasi di bandara pada saat penerbangan atau terjadi penggantian armada pesawat. Silakan periksa informasi ruang tunggu melalui sistem penyampaian informasi saat Anda tiba di bandara.</li>
+                  <li> Jika Anda tidak berhasil menyelesaikan prosedur Online Check-In dikarenakan masalah teknis, seperti kesalahan pada printer atau sistem, perhatikan petunjuk pada halaman Online Check-In tersebut dan selesaikan prosedur boarding pada konter Check-In di bandara.</li>
+              </ul>
+              <div class="custom-control custom-checkbox mt-3">
+                <input type="checkbox" class="custom-control-input" id="agreeCheckbox" onchange="toggleButton()">
+                <label class="custom-control-label" for="agreeCheckbox">Saya sudah membaca pemberitahuan dan informasi check-in</label>
+              </div>
+              <div class="mt-4 d-flex justify-content-center">
+                <button id="lanjutButton" class="btn btn-secondary mt-3" disabled>Lanjutkan</button>
+              </div>
+              </div>
+          </div>
         </div>
         <div class="tab-pane fade" id="info">
-            <h2>Info Penerbangan</h2>
+            <h2></h2>
+            <div class="mt-5">
+              <h2></h2>
+              <form id="advancedSearchForm">
+                <div class="form-row">
+                  <div class="form-group col-md-4">
+                    <label for="inputFrom">From</label>
+                    <input type="text" class="form-control" id="inputFrom" placeholder="Departure">
+                  </div>
+                  <div class="form-group col-md-4">
+                    <label for="inputTo">To</label>
+                    <input type="text" class="form-control" id="inputTo" placeholder="Destination">
+                  </div>
+                  <div class="form-group col-md-4">
+                    <label for="inputDate">Pergi</label>
+                    <input type="date" class="form-control" id="inputDate">
+                  </div>
+                </div>
+                <div class="mt-5 d-flex justify-content-center">
+                  <button type="submit" class="btn btn-primary">Check</button>
+                </div>
+              </form>
+            </div>
         </div>
         <div class="tab-pane fade" id="perjalanan">
             <h2></h2>
@@ -162,26 +217,28 @@
                 </div>
               </div>
             </div>
-            <p>
-              Syarat & Ketentuan Manage My Booking<br><br>
-              <ol class="custom-list">
-                <li>Cek informasi reservasi.</li>
-                <li>Menambahkan layanan seperti Pemilihan Kursi (mungkin berbayar), Permintaan Khusus Makanan, serta Bagasi Tambahan Berbayar.
-                  <ul class="custom-list">
-                    <li>Pemilihan kursi berbayar serta bagasi tambahan berbayar hanya berlaku untuk tiket yang dibeli melalui Garuda Indonesia Channel (Website, GIA Mobile App, Kantor Penjualan, dan Contact Center).</li>
-                  </ul>
-                </li>
-                <li>Melakukan perubahan detail kontak.</li>
-                <li>Penjadwalan Ulang Penerbangan.
-                  <ul class="custom-list">
-                    <li>Berlaku untuk seluruh rute penerbangan Garuda Indonesia, baik Domestik ataupun Internasional.</li>
-                    <li>Hanya berlaku untuk tiket sebelum jadwal keberangkatan.</li>
-                    <li>Hanya berlaku untuk tiket yang dibeli melalui Garuda Indonesia Channel (Website, GIA Mobile App, Kantor Penjualan, dan Contact Center).</li>
-                  </ul>
-                </li>
-              </ol>
-            </p>
-            <div class="mt-5 d-flex justify-content-end">
+            <div class="info-di-panel">
+              <p>
+                Syarat & Ketentuan Manage My Booking<br><br>
+                <ol class="custom-list">
+                  <li>Cek informasi reservasi.</li>
+                  <li>Menambahkan layanan seperti Pemilihan Kursi (mungkin berbayar), Permintaan Khusus Makanan, serta Bagasi Tambahan Berbayar.
+                    <ul class="custom-list">
+                      <li>Pemilihan kursi berbayar serta bagasi tambahan berbayar hanya berlaku untuk tiket yang dibeli melalui Garuda Indonesia Channel (Website, GIA Mobile App, Kantor Penjualan, dan Contact Center).</li>
+                    </ul>
+                  </li>
+                  <li>Melakukan perubahan detail kontak.</li>
+                  <li>Penjadwalan Ulang Penerbangan.
+                    <ul class="custom-list">
+                      <li>Berlaku untuk seluruh rute penerbangan Garuda Indonesia, baik Domestik ataupun Internasional.</li>
+                      <li>Hanya berlaku untuk tiket sebelum jadwal keberangkatan.</li>
+                      <li>Hanya berlaku untuk tiket yang dibeli melalui Garuda Indonesia Channel (Website, GIA Mobile App, Kantor Penjualan, dan Contact Center).</li>
+                    </ul>
+                  </li>
+                </ol>
+              </p>
+            </div>
+            <div class="mt-5 d-flex justify-content-center">
               <button type="submit" class="btn btn-primary" onclick="cariPerjalanan()">Cari</button>
             </div>
             <!-- Hasil pencarian atau informasi perjalanan dapat ditampilkan di sini -->
