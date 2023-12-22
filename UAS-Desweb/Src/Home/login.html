@@ -15,7 +15,7 @@
   <link href="https://fonts.googleapis.com/css2?family=Open+Sans:ital,wght@0,300;0,400;0,500;0,600;0,700;1,300;1,400;1,600;1,700&family=Montserrat:ital,wght@0,300;0,400;0,500;0,600;0,700;1,300;1,400;1,500;1,600;1,700&family=Raleway:ital,wght@0,300;0,400;0,500;0,600;0,700;1,300;1,400;1,500;1,600;1,700&display=swap" rel="stylesheet">
 
   <!-- Template Main CSS File -->
-  <link href="flights.css" rel="stylesheet">
+  <link href="css/flights.css" rel="stylesheet">
 
   <!-- Bootstrap CSS -->
   <link href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css" rel="stylesheet">
@@ -23,7 +23,7 @@
   <!-- Inside the <head> tag -->
   <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.4/css/all.min.css">
 
-  <script src="jquery.js"></script>
+  <script src="js/jquery.js"></script>
 </head>
 
 <body>
@@ -68,7 +68,7 @@
               <li><a href="#">FAQ</a></li>
             </ul>
           </li>
-          <li><a href="#">Login</a></li>
+          <li><a href="#">Logout</a></li>
         </ul>
       </nav><!-- .navbar -->
 
@@ -82,9 +82,9 @@
   <!-- ======= Hero Section ======= -->
   <section id="hero" class="hero">
     <div class="container position-relative">
-      <div class="row gy-5" data-aos="fade-in">
+      <div class="row gy-5" data-aos="fade-in" style="">
         <div class="col-lg-6 order-2 order-lg-1 d-flex flex-column justify-content-center text-center text-lg-start">
-          <h2>Flight Services</h2>
+          <h2>Welcome <span>Name</span>!</h2>
           <p>Sed autem laudantium dolores. Voluptatem itaque ea consequatur eveniet. Eum quas beatae cumque eum quaerat.</p>
           <div class="d-flex justify-content-center justify-content-lg-start">
             <a href="#" class="btn-get-started no-underline">Check In Now</a>
@@ -102,7 +102,129 @@
   <main id="main">
     
     <section>
-        
+        <div class="container">
+            <ul class="nav nav-tabs" id="myTripsTabs" role="tablist">
+              <li class="nav-item">
+                <a class="nav-link active" id="ongoing-tab" data-toggle="tab" href="#ongoing" role="tab" aria-controls="ongoing" aria-selected="true">On Going</a>
+              </li>
+              <li class="nav-item">
+                <a class="nav-link" id="history-tab" data-toggle="tab" href="#history" role="tab" aria-controls="history" aria-selected="false">History</a>
+              </li>
+            </ul>
+            <div class="tab-content" id="myTripsTabContent">
+              <div class="tab-pane fade show active" id="ongoing" role="tabpanel" aria-labelledby="ongoing-tab">
+                <div class="card-deck">
+                  <!-- Card content for On Going trips -->
+                  <div class="card">
+                    <div class="card-body">
+                      <h5 class="card-title">Trip Name</h5>
+                      <p class="card-text">Location: City, Country</p>
+                      <p class="card-text">Date: Start Date - End Date</p>
+                      <a href="#" class="btn btn-primary">View Details</a>
+                    </div>
+                  </div>
+                  <!-- More cards for On Going trips if needed -->
+                </div>
+              </div>
+              
+              <div class="tab-pane fade" id="history" role="tabpanel" aria-labelledby="history-tab">
+                <div class="card-deck">
+                  <!-- Card content for History of trips -->
+                  <div class="card">
+                    <div class="card-body">
+                      <h5 class="card-title">Trip Name</h5>
+                      <p class="card-text">Location: City, Country</p>
+                      <p class="card-text">Date: Start Date - End Date</p>
+                      <a href="#" class="btn btn-primary">View Details</a>
+                    </div>
+                    <div class="card-body">
+                      <h5 class="card-title">Trip Name</h5>
+                      <p class="card-text">Location: City, Country</p>
+                      <p class="card-text">Date: Start Date - End Date</p>
+                      <a href="#" class="btn btn-primary">View Details</a>
+                    </div>
+                  </div>
+                  <!-- More cards for History of trips if needed -->
+                </div>
+              </div>
+            </div>
+          </div>
+
+          <!-- Check In and Vouchers section -->
+<div class="container mt-4">
+  <div class="row">
+<div class="col-md-6">
+  <div class="card h-100 check-in-card">
+    <div class="card-body">
+      <h5 class="card-title">Check In</h5>
+      <p class="card-text">Check in for your upcoming flights to save time at the airport.</p>
+      <form id="quickCheckInForm">
+        <div class="mb-3">
+          <label for="flightNumber" class="form-label">Flight Number</label>
+          <input type="text" class="form-control" id="flightNumber" placeholder="Enter your flight number" required>
+        </div>
+        <div class="mb-3">
+          <label for="passengerName" class="form-label">Passenger Name</label>
+          <input type="text" class="form-control" id="passengerName" placeholder="Enter your name" required>
+        </div>
+        <button type="button" class="btn btn-primary check-in-btn" onclick="quickCheckIn()">Check In Now</button>
+      </form>
+    </div>
+  </div>
+</div>
+
+<div class="col-md-6">
+  <div class="card h-100 vouchers-card">
+    <div class="card-body">
+      <h5 class="card-title" style="text-align: center;">Vouchers</h5>
+      <div class="vouchers-info">
+        <div class="user-vouchers">
+          <h6>Your Vouchers</h6>
+          <ul>
+            <li>
+              <span class="voucher-icon">
+                <i class="fas fa-gift"></i>
+              </span>
+              Voucher 1 - 10% off on next booking
+            </li>
+            <li>
+              <span class="voucher-icon">
+                <i class="fas fa-utensils"></i>
+              </span>
+              Voucher 2 - Free lounge access
+            </li>
+            <!-- Tambahkan informasi lebih lanjut mengenai vouchers user di sini -->
+          </ul>
+        </div>
+        <div class="available-vouchers">
+          <h6>Available Offers</h6>
+          <ul>
+            <li>
+              <span class="voucher-icon">
+                <i class="fas fa-globe"></i>
+              </span>
+              New Year Sale - Up to 20% off
+            </li>
+            <li>
+              <span class="voucher-icon">
+                <i class="fas fa-user-friends"></i>
+              </span>
+              Refer a Friend - Get $50 off
+            </li>
+            <!-- Tambahkan informasi lebih lanjut mengenai vouchers yang ditawarkan di sini -->
+          </ul>
+        </div>
+      </div>
+    </div>
+    <div style="margin-left: 150px;">
+        <a href="#" class="btn btn-primary">View All Vouchers</a>
+      </div>
+  </div>
+</div>
+
+  </div>
+</div>
+          
     </section>
 
 
@@ -179,100 +301,11 @@
     <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/js/bootstrap.min.js"></script>
 
   <!-- Template Main JS File -->
-  <script src="flights.js"></script>
+  <script src="js/flights.js"></script>
 
-  <script>
-    // Data destinasi dengan informasi tambahan (gambar, harga, informasi)
-const destinations = [
-  { 
-    name: 'Tokyo, Jepang',
-    category: 'asia',
-    image: 'https://via.placeholder.com/300',
-    price: '$1000',
-    info: ''
-  },
-  { 
-    name: 'Long Angeles, Amerika',
-    category: 'america',
-    image: 'https://via.placeholder.com/300',
-    price: '$1000',
-    info: ''
-  },
-  { 
-    name: 'Sydney, Australia',
-    category: 'australia',
-    image: 'https://via.placeholder.com/300',
-    price: '$1000',
-    info: ''
-  },
-  { 
-    name: 'Britania Raya, Europe',
-    category: 'europe',
-    image: 'https://via.placeholder.com/300',
-    price: '$1000',
-    info: ''
-  },
-  { 
-    name: 'Jakarta, Indonesia',
-    category: 'asia',
-    image: 'https://via.placeholder.com/300',
-    price: '$1000',
-    info: ''
-  },
-];
-
-// Fungsi untuk menampilkan destinasi sesuai filter
-function displayDestinations(category) {
-  const destinationsContainer = document.getElementById('destinations');
-  destinationsContainer.innerHTML = '';
-
-  let filteredDestinations = destinations;
-  if (category !== 'all') {
-    filteredDestinations = destinations.filter(destination => destination.category === category);
-  }
-
-  filteredDestinations.forEach(destination => {
-    createDestinationCard(destination);
-  });
-}
-
-// Fungsi untuk membuat tampilan kartu destinasi
-function createDestinationCard(destination) {
-  const destinationCard = document.createElement('div');
-  destinationCard.classList.add('col-md-4', 'mb-4');
-
-  const card = `
-    <div class="card">
-      <img src="${destination.image}" class="destination-image" alt="${destination.name}">
-      <div class="card-body">
-        <h5 class="card-title">${destination.name}</h5>
-        <p class="card-text">${destination.info}</p>
-        <p class="card-text"><strong>Harga:</strong> ${destination.price}</p>
-      </div>
-    </div>
-  `;
-
-  destinationCard.innerHTML = card;
-  document.getElementById('destinations').appendChild(destinationCard);
-}
-
-// Event listener untuk tombol filter
-document.addEventListener('DOMContentLoaded', () => {
-  const filterButtons = document.querySelectorAll('.filter-btn');
-
-  filterButtons.forEach(btn => {
-    btn.addEventListener('click', () => {
-      const category = btn.getAttribute('data-filter');
-      displayDestinations(category);
-    });
-  });
-  
-  // Tampilkan semua destinasi saat halaman dimuat
-  displayDestinations('all');
-});
-
-
-  </script>
+  <a href="tel:+123456789" class="customer-service">
+    <i class="fas fa-headset"></i>
+  </a>
 
 </body>
 

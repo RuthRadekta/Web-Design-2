@@ -331,3 +331,20 @@ function toggleAnswer(id, arrowId) {
   }
   
   
+    //Login Section of JS
+    function quickCheckIn() {
+      // Fetch data from the form
+      const flightNumber = document.getElementById('flightNumber').value;
+      const passengerName = document.getElementById('passengerName').value;
+  
+      // Validate the form data (you can add more validation logic)
+      if (!flightNumber || !passengerName) {
+        alert('Please fill in all the required fields.');
+        return;
+      }
+  
+      // Simulate the check-in process (you can replace this with actual API calls)
+      alert(`Quick check-in successful for ${passengerName} on flight ${flightNumber}!`);
+  
+      // You can also redirect the user or perform other actions after successful check-in
+    }
