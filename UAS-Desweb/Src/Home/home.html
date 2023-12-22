@@ -5,8 +5,10 @@
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <title>Maskapai Penerbangan</title>
   <script src="https://code.jquery.com/jquery-3.6.4.min.js"></script>
+  <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/js/bootstrap.min.js"></script>
+  <script src="https://code.jquery.com/ui/1.12.1/jquery-ui.js"></script>
   <link href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css" rel="stylesheet">
-  <link rel="stylesheet" href="css/styles.css">
+  <link rel="stylesheet" href="home.css">
   <style>
     body {
       background-image: url('https://via.placeholder.com/1500x800');
@@ -34,7 +36,7 @@
 
   <!-- ini navbar y ges -->
   <nav class="navbar navbar-expand-lg navbar-light bg-light">
-    <a class="navbar-brand" href="#">Maskapai Penerbangan</a>
+    <a class="navbar-brand" href="#">Maskapai.</a>
     <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarNav" aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
       <span class="navbar-toggler-icon"></span>
     </button>
@@ -56,9 +58,69 @@
     </div>
   </nav>
 
+  <div class="container mt-5">
+    <h1>Welcome to Our Airline</h1> <br>
+    <!-- ini kaya tabbed pane di jframe -->
+    <ul class="nav nav-tabs nav-fill" id="myTabs">
+        <li class="nav-item">
+            <a class="nav-link active" id="flights-tab" data-toggle="tab" href="#flights">TIKET PESAWAT</a>
+        </li>
+        <li class="nav-item">
+            <a class="nav-link" id="offers-tab" data-toggle="tab" href="#offers">CHECK-IN</a>
+        </li>
+        <li class="nav-item">
+            <a class="nav-link" id="news-tab" data-toggle="tab" href="#news">INFO PENERBANGAN</a>
+        </li>
+        <li class="nav-item">
+            <a class="nav-link" id="testimonials-tab" data-toggle="tab" href="#testimonials">PERJALANAN SAYA</a>
+        </li>
+    </ul>
+    <div class="tab-content mt-3">
+        <div class="tab-pane fade show active" id="flights">
+            <h2>Tiket Pesawat</h2>
+            <div class="mt-5">
+              <h2>Advanced Flight Search</h2>
+              <form id="advancedSearchForm">
+                <div class="form-row">
+                  <div class="form-group col-md-4">
+                    <label for="inputFrom">From</label>
+                    <input type="text" class="form-control" id="inputFrom" placeholder="Departure">
+                  </div>
+                  <div class="form-group col-md-4">
+                    <label for="inputTo">To</label>
+                    <input type="text" class="form-control" id="inputTo" placeholder="Destination">
+                  </div>
+                  <div class="form-group col-md-2">
+                    <label for="inputDate">Departure Date</label>
+                    <input type="date" class="form-control" id="inputDate">
+                  </div>
+                  <div class="form-group col-md-2">
+                    <label for="inputClass">Class</label>
+                    <select id="inputClass" class="form-control">
+                      <option selected>Choose...</option>
+                      <option>Economy</option>
+                      <option>Business</option>
+                    </select>
+                  </div>
+                </div>
+                <button type="submit" class="btn btn-primary">Search</button>
+              </form>
+          </div>
+        </div>
+        <div class="tab-pane fade" id="offers">
+            <h2>Check-In</h2>
+        </div>
+        <div class="tab-pane fade" id="news">
+            <h2>Info Penerbangan</h2>
+        </div>
+        <div class="tab-pane fade" id="testimonials">
+            <h2>Perjalanan Saya</h2>
+        </div>
+    </div>
+  </div>
 
   <div class="container">
-    <h1>Welcome to Our Airline</h1>
+    <!-- 
     <p>Book your flights with ease and comfort.</p>
 
     <div class="mt-5">
@@ -88,9 +150,10 @@
           </div>
           <button type="submit" class="btn btn-primary">Search</button>
         </form>
-      </div>
+    </div>
+   -->
 
-<div class="mt-5">
+  <div class="mt-5">
     <h2>Available Flights</h2>
     <div class="row">
       <div class="col-md-6">
@@ -126,8 +189,7 @@
     </div>
   </div>
 
-<!-- Offer Section -->
-<div class="container mt-4">
+  <div class="container mt-4">
     <h2 class="text-center mb-4">Special Offers</h2>
     <div id="carouselExampleControls" class="carousel slide" data-ride="carousel">
       <div class="carousel-inner">
@@ -164,8 +226,7 @@
     </div>
   </div>
   
-<!-- News Highlights Section -->
-<div class="container mt-5">
+  <div class="container mt-5">
     <h2 class="text-center mb-4">News Highlights</h2>
     <div class="row">
       <div class="col-md-6 mb-4">
@@ -192,16 +253,12 @@
     </div>
   </div>
   
-  
-
-  <!-- Testimonials Section -->
   <div class="mt-5">
     <h2>Customer Testimonials</h2>
     <div id="testimonialsCarousel" class="carousel slide" data-ride="carousel">
       <ol class="carousel-indicators">
         <li data-target="#testimonialsCarousel" data-slide-to="0" class="active"></li>
         <li data-target="#testimonialsCarousel" data-slide-to="1"></li>
-        <!-- Add more indicators if needed -->
       </ol>
       <div class="carousel-inner">
         <div class="carousel-item active">
@@ -216,7 +273,6 @@
             <p>"Comfortable seats and friendly staff. Highly recommend!"</p>
           </div>
         </div>
-        <!-- Add more testimonials -->
       </div>
       <a class="carousel-control-prev" href="#testimonialsCarousel" role="button" data-slide="prev">
         <span class="carousel-control-prev-icon" aria-hidden="true"></span>
@@ -229,52 +285,14 @@
     </div>
   </div>
 
-  <div class="container mt-5">
-    <!-- Tab Navigation -->
-    <ul class="nav nav-tabs" id="myTabs">
-        <li class="nav-item">
-            <a class="nav-link active" id="flights-tab" data-toggle="tab" href="#flights">Flights</a>
-        </li>
-        <li class="nav-item">
-            <a class="nav-link" id="offers-tab" data-toggle="tab" href="#offers">Special Offers</a>
-        </li>
-        <li class="nav-item">
-            <a class="nav-link" id="news-tab" data-toggle="tab" href="#news">News</a>
-        </li>
-        <li class="nav-item">
-            <a class="nav-link" id="testimonials-tab" data-toggle="tab" href="#testimonials">Testimonials</a>
-        </li>
-    </ul>
-
-    <!-- Tab Content -->
-    <div class="tab-content mt-3">
-        <div class="tab-pane fade show active" id="flights">
-            <h2>Flights Tab</h2>
-            <!-- Content for Flights Tab -->
-        </div>
-        <div class="tab-pane fade" id="offers">
-            <h2>Special Offers Tab</h2>
-            <!-- Content for Special Offers Tab -->
-        </div>
-        <div class="tab-pane fade" id="news">
-            <h2>News Tab</h2>
-            <!-- Content for News Tab -->
-        </div>
-        <div class="tab-pane fade" id="testimonials">
-            <h2>Testimonials Tab</h2>
-            <!-- Content for Testimonials Tab -->
-        </div>
-    </div>
-</div>
-
   <footer class="mt-5">
     <div class="container">
       <hr>
-      <p class="text-center">&copy; 2023 Your Airline. All rights reserved.</p>
+      <p class="text-center">&copy; 2023 Maskapai. All rights reserved.</p>
     </div>
   </footer>
 
-  <script src="scripts.js"></script>
+  <script src="home.js"></script>
   <script src="js/autocomplete.js"></script>
 </body>
 </html>
