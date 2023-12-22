@@ -3,7 +3,7 @@
   transition: background 0.3s ease; /* Add transition for a smoother effect */
   position: sticky;
   top: 0;
-  z-index: 1000; /* Set a high z-index to ensure it appears above other elements */
+  z-index: 1000;
 }
 
 #header.scrolled {
@@ -11,7 +11,7 @@
 }
 
 #topbar {
-  background: rgba(70, 130, 169, 0); /* The fourth value (0.5) represents the alpha (transparency) level */
+  background: rgba(70, 130, 169, 0);
 }
 
 body::before {
@@ -27,10 +27,10 @@ body::before {
 
 body {
   background-image: url('assets/pesawat.png');
-  background-size: cover; /* or use 'contain' if you want the whole image to be visible */
+  background-size: cover;
   background-repeat: no-repeat;
-  background-attachment: fixed; /* Fixed background */
-  background-position: center center; /* Center the background image */
+  background-attachment: fixed;
+  background-position: center center;
 }
   
 .p {

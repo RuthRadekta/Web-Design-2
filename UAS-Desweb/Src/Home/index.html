@@ -85,41 +85,45 @@
   </header><!-- End Header -->
   <!-- End Header -->
 
-  <div class="container mt-5 p" id="tab">
+  <div class="container mt-5 p">
     <h1>Welcome to Our Airline</h1> <br>
     <!-- ini kaya tabbed pane di jframe -->
     <ul class="nav nav-tabs nav-fill" id="myTabs">
         <li class="nav-item">
-            <a class="nav-link active" id="flights-tab" data-toggle="tab" href="#flights">TIKET PESAWAT</a>
+            <a class="nav-link active" id="flights-tab" data-toggle="tab" href="#tiket">TIKET PESAWAT</a>
         </li>
         <li class="nav-item">
-            <a class="nav-link" id="offers-tab" data-toggle="tab" href="#offers">CHECK-IN</a>
+            <a class="nav-link" id="offers-tab" data-toggle="tab" href="#check-in">CHECK-IN</a>
         </li>
         <li class="nav-item">
-            <a class="nav-link" id="news-tab" data-toggle="tab" href="#news">INFO PENERBANGAN</a>
+            <a class="nav-link" id="news-tab" data-toggle="tab" href="#info">INFO PENERBANGAN</a>
         </li>
         <li class="nav-item">
-            <a class="nav-link" id="testimonials-tab" data-toggle="tab" href="#testimonials">PERJALANAN SAYA</a>
+            <a class="nav-link" id="testimonials-tab" data-toggle="tab" href="#perjalanan">PERJALANAN SAYA</a>
         </li>
     </ul>
     <div class="tab-content mt-3">
-        <div class="tab-pane fade show active" id="flights">
+        <div class="tab-pane fade show active" id="tiket">
             <h2></h2>
             <div class="mt-5">
-              <h2>Advanced Flight Search</h2>
+              <h2></h2>
               <form id="advancedSearchForm">
                 <div class="form-row">
-                  <div class="form-group col-md-4">
+                  <div class="form-group col-md-3">
                     <label for="inputFrom">From</label>
                     <input type="text" class="form-control" id="inputFrom" placeholder="Departure">
                   </div>
-                  <div class="form-group col-md-4">
+                  <div class="form-group col-md-3">
                     <label for="inputTo">To</label>
                     <input type="text" class="form-control" id="inputTo" placeholder="Destination">
                   </div>
                   <div class="form-group col-md-2">
                     <label for="inputDate">Departure Date</label>
                     <input type="date" class="form-control" id="inputDate">
+                  </div>
+                  <div class="form-group col-md-2">
+                    <label for="inputPassengers">Passenger Count</label>
+                    <input type="number" class="form-control" id="inputPassengers" min="1" placeholder="1">
                   </div>
                   <div class="form-group col-md-2">
                     <label for="inputClass">Class</label>
@@ -130,18 +134,58 @@
                     </select>
                   </div>
                 </div>
-                <button type="submit" class="btn btn-primary">Search</button>
+                <div class="mt-5 d-flex justify-content-end">
+                  <button type="submit" class="btn btn-primary">Search</button>
+                </div>
               </form>
           </div>
         </div>
-        <div class="tab-pane fade" id="offers">
+        <div class="tab-pane fade" id="check-in">
             <h2>Check-In</h2>
         </div>
-        <div class="tab-pane fade" id="news">
+        <div class="tab-pane fade" id="info">
             <h2>Info Penerbangan</h2>
         </div>
-        <div class="tab-pane fade" id="testimonials">
-            <h2>Perjalanan Saya</h2>
+        <div class="tab-pane fade" id="perjalanan">
+            <h2></h2>
+            <div class="row">
+              <div class="col-md-6">
+                <div class="form-group">
+                  <label for="kodeBooking">Kode Booking</label>
+                  <input type="text" class="form-control" id="kodeBooking" placeholder="Masukkan Kode Booking">
+                </div>
+              </div>
+              <div class="col-md-6">
+                <div class="form-group">
+                  <label for="namaBelakang">Nama Belakang</label>
+                  <input type="text" class="form-control" id="namaBelakang" placeholder="Masukkan Nama Belakang">
+                </div>
+              </div>
+            </div>
+            <p>
+              Syarat & Ketentuan Manage My Booking<br><br>
+              <ol class="custom-list">
+                <li>Cek informasi reservasi.</li>
+                <li>Menambahkan layanan seperti Pemilihan Kursi (mungkin berbayar), Permintaan Khusus Makanan, serta Bagasi Tambahan Berbayar.
+                  <ul class="custom-list">
+                    <li>Pemilihan kursi berbayar serta bagasi tambahan berbayar hanya berlaku untuk tiket yang dibeli melalui Garuda Indonesia Channel (Website, GIA Mobile App, Kantor Penjualan, dan Contact Center).</li>
+                  </ul>
+                </li>
+                <li>Melakukan perubahan detail kontak.</li>
+                <li>Penjadwalan Ulang Penerbangan.
+                  <ul class="custom-list">
+                    <li>Berlaku untuk seluruh rute penerbangan Garuda Indonesia, baik Domestik ataupun Internasional.</li>
+                    <li>Hanya berlaku untuk tiket sebelum jadwal keberangkatan.</li>
+                    <li>Hanya berlaku untuk tiket yang dibeli melalui Garuda Indonesia Channel (Website, GIA Mobile App, Kantor Penjualan, dan Contact Center).</li>
+                  </ul>
+                </li>
+              </ol>
+            </p>
+            <div class="mt-5 d-flex justify-content-end">
+              <button type="submit" class="btn btn-primary" onclick="cariPerjalanan()">Cari</button>
+            </div>
+            <!-- Hasil pencarian atau informasi perjalanan dapat ditampilkan di sini -->
+            <div id="hasilPerjalanan"></div>
         </div>
     </div>
   </div>
